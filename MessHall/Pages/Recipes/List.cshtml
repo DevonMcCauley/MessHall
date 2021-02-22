@@ -22,10 +22,14 @@
     </div>
 </form>
 
+<div style="margin: 10px 0px 10px 0px">
+
+    <a asp-page=".\Edit" class="btn btn-primary">Add New</a>
+</div>
+
+
 
 @foreach (var recipe in Model.Recipes)
 {
     <partial name="_RecipeCard" model="recipe" />
 }
-
-<a asp-page=".\Edit" class="btn btn-primary">Add New</a>
