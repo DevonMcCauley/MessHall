@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MessHall.Models
 {
@@ -56,6 +57,16 @@ namespace MessHall.Models
             var rec = appDbContext.Recipes.Attach(updatedRecipe);
             rec.State = EntityState.Modified;
             return updatedRecipe;
+        }
+
+        public IEnumerable<Recipe> GetRecipesByName(string name)
+        {
+            var query = from r in appDbContext.Recipes
+                        where r.Name.StartsWith(name) || string.IsNullOrEmpty(name)
+                        orderby r.Name
+                        select r;
+            return query;
+
         }
     }
 }

@@ -1,4 +1,5 @@
 using MessHall.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
 
@@ -15,9 +16,12 @@ namespace MessHall.Pages.Recipes
             this.recipeRepository = recipeRepository;
         }
 
+        [BindProperty(SupportsGet = true)]
+        public string SearchTerm { get; set; }
+
         public void OnGet()
         {
-            Recipes = recipeRepository.AllRecipes;
+            Recipes = recipeRepository.GetRecipesByName(SearchTerm);
         }
     }
 }

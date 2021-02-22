@@ -5,6 +5,8 @@ namespace MessHall.Models
     public interface IRecipeRepository
     {
 
+        IEnumerable<Recipe> GetRecipesByName(string name);
+
         IEnumerable<Recipe> AllRecipes { get; }
 
         Recipe GetRecipeById(int recipeId);
