@@ -1,0 +1,36 @@
+﻿@page "{ingredientId?}"
+@model MessHall.Pages.Ingredients.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<h2>Editing @Model.Ingredient.Name</h2>
+
+<form method="post">
+
+    <input type="hidden" asp-for="Ingredient.IngredientId" />
+    <div class="form-group">
+        <label asp-for="Ingredient.Name"></label>
+        <input asp-for="Ingredient.Name" class="form-control" />
+        <span class="text-danger" asp-validation-for="Ingredient.Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Ingredient.Description"></label>
+        <input asp-for="Ingredient.Description" class="form-control" />
+        <span class="text-danger" asp-validation-for="Ingredient.Description"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Ingredient.CaloriesPerUnit"></label>
+        <input asp-for="Ingredient.CaloriesPerUnit" class="form-control" />
+        <span class="text-danger" asp-validation-for="Ingredient.CaloriesPerUnit"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+
+@section scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
