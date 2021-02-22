@@ -1,0 +1,17 @@
+﻿@page "{recipeId:int}"
+@model MessHall.Pages.Recipes.DetailModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+<h2>@Model.Recipe.Name</h2>
+
+
+<h3>@Model.Recipe.Description</h3>
+
+<p>@Model.Recipe.Notes</p>
+
+
+
+<a asp-page="./List" class="btn btn-primary">All Recipes</a>

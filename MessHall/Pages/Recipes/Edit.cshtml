@@ -1,0 +1,32 @@
+﻿@page "{recipeId:int?}"
+@model MessHall.Pages.Recipes.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Editing @Model.Recipe.Name</h2>
+
+<form method="post">
+
+    <input type="hidden" asp-for="Recipe.RecipeId" />
+    <div class="form-group">
+        <label asp-for="Recipe.Name"></label>
+        <input asp-for="Recipe.Name" class="form-control" />
+        <span class="text-danger" asp-validation-for="Recipe.Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Recipe.Description"></label>
+        <input asp-for="Recipe.Description" class="form-control" />
+        <span class="text-danger" asp-validation-for="Recipe.Description"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Recipe.Notes"></label>
+        <input asp-for="Recipe.Notes" class="form-control" />
+        <span class="text-danger" asp-validation-for="Recipe.Notes"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+
+

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessHall", "MessHall\MessHall.csproj", "{02DCBFC6-A4F6-4ECE-85A9-F1637278B7CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessHall", "MessHall\MessHall.csproj", "{A090A049-E977-4412-9023-FAF9E0EF4247}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{02DCBFC6-A4F6-4ECE-85A9-F1637278B7CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02DCBFC6-A4F6-4ECE-85A9-F1637278B7CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02DCBFC6-A4F6-4ECE-85A9-F1637278B7CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02DCBFC6-A4F6-4ECE-85A9-F1637278B7CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A090A049-E977-4412-9023-FAF9E0EF4247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A090A049-E977-4412-9023-FAF9E0EF4247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A090A049-E977-4412-9023-FAF9E0EF4247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A090A049-E977-4412-9023-FAF9E0EF4247}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C555CA8F-4B72-4304-971D-C8BC2B441F3F}
+		SolutionGuid = {2B18E5F9-A77A-43A1-942F-958DE89FA605}
 	EndGlobalSection
 EndGlobal

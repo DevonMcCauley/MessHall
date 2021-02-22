@@ -1,0 +1,15 @@
+﻿@page
+@model MessHall.Pages.Recipes.ListModel
+@{
+
+    ViewData["Title"] = "Recipes";
+
+}
+
+<h1>Current Recipes</h1>
+@foreach (var recipe in Model.Recipes)
+{
+    <partial name="_RecipeCard" model="recipe" />
+}
+
+<a asp-page=".\Edit" class="btn btn-primary">Add New</a>

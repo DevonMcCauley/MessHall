@@ -1,9 +1,0 @@
-﻿@model Recipe
-
-<div class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title">@Model.Name</h5>
-        <p class="card-text">@Model.Description</p>
-        <a asp-controller="Recipe" asp-action="Details" asp-route-id="@Model.RecipeId">@Model.Name</a>
-    </div>
-</div>

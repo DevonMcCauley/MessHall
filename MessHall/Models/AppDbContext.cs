@@ -27,6 +27,7 @@ namespace MessHall.Models
                 RecipeId = 1,
                 Name = "Apple Pie",
                 Description = "A delicious apple pie.",
+                Notes = "This apple pie contains 2 ingredients: apple and pie",
 
             });
 
@@ -35,6 +36,7 @@ namespace MessHall.Models
                 RecipeId = 2,
                 Name = "Lasagna",
                 Description = "A hearty lasagna",
+                Notes = "This this is a good lasagna",
 
             });
 
@@ -43,7 +45,7 @@ namespace MessHall.Models
                 RecipeId = 3,
                 Name = "Pizza",
                 Description = "A classic American pizza",
-
+                Notes = "This pizza is also good",
             });
 
 

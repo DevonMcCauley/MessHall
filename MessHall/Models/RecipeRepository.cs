@@ -1,29 +1,61 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace MessHall.Models
 {
     public class RecipeRepository : IRecipeRepository
     {
-        private readonly AppDbContext _appDbContext;
+        private readonly AppDbContext appDbContext;
 
 
         public RecipeRepository(AppDbContext appDbContext)
         {
-            _appDbContext = appDbContext;
+            this.appDbContext = appDbContext;
+        }
+
+
+
+        public Recipe Add(Recipe newRecipe)
+        {
+            appDbContext.Add(newRecipe);
+            return newRecipe;
         }
 
         public IEnumerable<Recipe> AllRecipes
         {
             get
             {
-                return _appDbContext.Recipes;
+                return appDbContext.Recipes;
             }
+        }
+
+        public int Commit()
+        {
+            return appDbContext.SaveChanges();
+
+        }
+
+        public Recipe Delete(int recipeId)
+        {
+            var recipe = GetRecipeById(recipeId);
+            if (recipe != null)
+            {
+                appDbContext.Recipes.Remove(recipe);
+            }
+
+            return recipe;
         }
 
         public Recipe GetRecipeById(int recipeId)
         {
-            return _appDbContext.Recipes.FirstOrDefault(r => r.RecipeId == recipeId);
+            return appDbContext.Recipes.Find(recipeId);
+        }
+
+        public Recipe Update(Recipe updatedRecipe)
+        {
+            var rec = appDbContext.Recipes.Attach(updatedRecipe);
+            rec.State = EntityState.Modified;
+            return updatedRecipe;
         }
     }
 }

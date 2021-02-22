@@ -26,13 +26,18 @@ namespace MessHall.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(35)
+                        .HasColumnType("nvarchar(35)");
 
                     b.Property<string>("Notes")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.HasKey("RecipeId");
 
@@ -43,19 +48,22 @@ namespace MessHall.Migrations
                         {
                             RecipeId = 1,
                             Description = "A delicious apple pie.",
-                            Name = "Apple Pie"
+                            Name = "Apple Pie",
+                            Notes = "This apple pie contains 2 ingredients: apple and pie"
                         },
                         new
                         {
                             RecipeId = 2,
                             Description = "A hearty lasagna",
-                            Name = "Lasagna"
+                            Name = "Lasagna",
+                            Notes = "This this is a good lasagna"
                         },
                         new
                         {
                             RecipeId = 3,
                             Description = "A classic American pizza",
-                            Name = "Pizza"
+                            Name = "Pizza",
+                            Notes = "This pizza is also good"
                         });
                 });
 #pragma warning restore 612, 618
