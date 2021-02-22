@@ -1,0 +1,34 @@
+﻿@page
+@model MessHall.Pages.Ingredients.ListModel
+@{
+    ViewData["Title"] = "Ingredients";
+
+}
+
+<h1>Current Ingredients</h1>
+
+
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" asp-for="SearchTerm" />
+            <span style="margin-left: 5px;">
+                <button class="btn btn-primary">
+                    <i class="fas fa-search"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+</form>
+
+<div style="margin: 10px 0px 10px 0px">
+
+    <a asp-page=".\Edit" class="btn btn-primary">Add New</a>
+</div>
+
+
+
+@foreach (var ingredient in Model.Ingredients)
+{
+    <partial name="_IngredientCard" model="ingredient" />
+}

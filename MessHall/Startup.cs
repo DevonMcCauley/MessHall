@@ -27,6 +27,7 @@ namespace MessHall
             });
 
             services.AddScoped<IRecipeRepository, RecipeRepository>();
+            services.AddScoped<IIngredientRepository, IngredientRepository>();
 
             services.AddRazorPages();
         }

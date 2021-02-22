@@ -1,0 +1,38 @@
+﻿@using MessHall.Models
+@model Ingredient
+
+
+
+
+<!-- This view displays an Ingredient in List.cshtml -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card" style="margin-bottom: 1em;">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Name</h5>
+                <p class="card-text">@Model.Description</p>
+                
+                <div class="card-footer">
+
+                    <a class="btn btn-info"
+                       asp-page="./Detail"
+                       asp-route-ingredientId="@Model.IngredientId">
+                        <i class="far fa-list-alt fa-lg"></i>
+                    </a>
+
+                    <a class="btn btn-secondary"
+                       asp-page="./Edit"
+                       asp-route-ingredientId="@Model.IngredientId">
+                        <i class="far fa-edit fa-lg"></i>
+                    </a>
+
+                    <a class="btn btn-danger"
+                       asp-page="./Delete"
+                       asp-route-ingredientId="@Model.IngredientId">
+                        <i class="far fa-trash-alt fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
