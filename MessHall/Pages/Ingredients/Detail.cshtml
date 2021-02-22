@@ -1,0 +1,18 @@
+﻿@page "{ingredientId:int}"
+@model MessHall.Pages.Ingredients.DetailModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+
+
+<h2>@Model.Ingredient.Name</h2>
+
+<h3>@Model.Ingredient.Description</h3>
+
+<p>@Model.Ingredient.CaloriesPerUnit calories per unit</p>
+
+
+
+<a asp-page="./List" class="btn btn-primary">All Ingredients</a>
