@@ -2,9 +2,10 @@
 @model MessHall.Pages.Recipes.DetailModel
 @{
     ViewData["Title"] = "Detail";
+    // The Detail page is reached when a user wishes to see the details of a given Recipe
 }
 
-
+<!-- Displays Recipe information to the user-->
 <h2>@Model.Recipe.Name</h2>
 
 
@@ -13,5 +14,5 @@
 <p>@Model.Recipe.Notes</p>
 
 
-
+<!-- Allows user to return to the Recipes List-->
 <a asp-page="./List" class="btn btn-primary">All Recipes</a>

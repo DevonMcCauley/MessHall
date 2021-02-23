@@ -4,11 +4,14 @@
 
     ViewData["Title"] = "Recipes";
 
+    // The List page is used to display all recipes in the database to the user
+    // Also has search functionality
+
 }
 
 <h1>Current Recipes</h1>
 
-
+<!-- Form for the user to enter a search term to find a specific recipe-->
 <form method="get">
     <div class="form-group">
         <div class="input-group">
@@ -22,12 +25,13 @@
     </div>
 </form>
 
+<!-- An Add New button that brings user to the Edit page to add a new recipe-->
 <div style="margin: 10px 0px 10px 0px">
 
     <a asp-page=".\Edit" class="btn btn-primary">Add New</a>
 </div>
 
-
+<!-- Calls the _RecipeCard partial view to iterate and display recipes to the user-->
 
 @foreach (var recipe in Model.Recipes)
 {

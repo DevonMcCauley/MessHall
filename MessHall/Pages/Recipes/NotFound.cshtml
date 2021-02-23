@@ -1,8 +1,12 @@
 ﻿@page
 @{
     ViewData["Title"] = "Not Found";
+
+    // The Error page is typically reached when an invalid address has been passed to the application through the URL
+    // i.e. a user tries to go to "localhost:44308/Recipes/Detail/10" (assuming there is no recipe with an id of 10)
+    // This page displays a simple error message and allows the user to return to the Recipe List
+
 }
 
 <h2>Your recipe was not found</h2>
 <a asp-page="./List" class="btn btn-primary">See All Recipes</a>
-
