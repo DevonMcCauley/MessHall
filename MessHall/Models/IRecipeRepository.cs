@@ -4,6 +4,8 @@ namespace MessHall.Models
 {
     public interface IRecipeRepository
     {
+        // Interface for the Recipe Repository for CRUD operations
+
 
         IEnumerable<Recipe> GetRecipesByName(string name);
 

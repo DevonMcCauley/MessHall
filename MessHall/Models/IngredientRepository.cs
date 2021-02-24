@@ -7,6 +7,8 @@ namespace MessHall.Models
     public class IngredientRepository : IIngredientRepository
     {
 
+        // Ingredient Repository to support CRUD operations with the Recipe class
+
         private readonly AppDbContext appDbContext;
 
 

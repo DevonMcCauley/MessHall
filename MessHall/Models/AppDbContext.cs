@@ -10,6 +10,8 @@ namespace MessHall.Models
 
         }
 
+
+        // Creates DBSets for the database to work with Ingredients and Recipes
         public DbSet<Recipe> Recipes { get; set; }
         public DbSet<Ingredient> Ingredients { get; set; }
 

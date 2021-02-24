@@ -4,7 +4,7 @@ namespace MessHall.Models
 {
     public class Recipe
     {
-
+        // Recipe class
 
         public int RecipeId { get; set; }
         [Required, MaxLength(35)]

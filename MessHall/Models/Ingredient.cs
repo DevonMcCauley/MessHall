@@ -4,6 +4,7 @@ namespace MessHall.Models
 {
     public class Ingredient
     {
+        // Ingredient class
 
         public int IngredientId { get; set; }
         [Required, MaxLength(35)]

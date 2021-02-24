@@ -5,6 +5,9 @@ using System.Linq;
 namespace MessHall.Models
 {
     public class RecipeRepository : IRecipeRepository
+
+    // Recipe Repository to support CRUD operations with the Recipe class
+
     {
         private readonly AppDbContext appDbContext;
 
@@ -33,7 +36,6 @@ namespace MessHall.Models
         public int Commit()
         {
             return appDbContext.SaveChanges();
-
         }
 
         public Recipe Delete(int recipeId)
@@ -66,7 +68,6 @@ namespace MessHall.Models
                         orderby r.Name
                         select r;
             return query;
-
         }
     }
 }
