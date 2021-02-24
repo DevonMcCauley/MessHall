@@ -2,7 +2,7 @@
 @model MessHall.Pages.Ingredients.DeleteModel
 @{
     ViewData["Title"] = "Delete";
-
+    // The Delete page prompts the user to confirm that they wish to delete an Ingredient
 }
 
 
@@ -12,6 +12,8 @@
     Are you sure you want to delete @Model.Ingredient.Name?
 </div>
 
+
+<!-- Form to confirm deletion-->
 <form method="post">
     <button type="submit" class="btn btn-danger">Yes!</button>
     <a asp-page="List" class="btn btn-default">Cancel</a>

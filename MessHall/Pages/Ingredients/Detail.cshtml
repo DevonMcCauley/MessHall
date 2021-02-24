@@ -2,11 +2,12 @@
 @model MessHall.Pages.Ingredients.DetailModel
 @{
     ViewData["Title"] = "Detail";
+    // The Detail page is reached when a user wishes to see the details of a given Ingredient
 }
 
 
 
-
+<!-- Displays Ingredient information to the user-->
 <h2>@Model.Ingredient.Name</h2>
 
 <h3>@Model.Ingredient.Description</h3>
@@ -14,5 +15,5 @@
 <p>@Model.Ingredient.CaloriesPerUnit calories per unit</p>
 
 
-
+<!-- Allows user to return to the Ingredient List-->
 <a asp-page="./List" class="btn btn-primary">All Ingredients</a>

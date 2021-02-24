@@ -7,10 +7,10 @@ namespace MessHall.Pages.Recipes
     public class DetailModel : PageModel
     {
 
-        // Recipe repository property
+        // Recipe repository
         private readonly IRecipeRepository recipeRepository;
 
-        // Recipe property
+        // Recipe
         public Recipe Recipe { get; set; }
 
         // Constructor

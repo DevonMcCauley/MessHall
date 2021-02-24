@@ -1,6 +1,10 @@
 ﻿@page
 @{
     ViewData["Title"] = "Not Found";
+
+    // The Error page is typically reached when an invalid address has been passed to the application through the URL
+    // i.e. a user tries to go to "localhost:44308/Ingredient/Detail/10" (assuming there is no ingredient with an id of 10)
+    // This page displays a simple error message and allows the user to return to the Ingredient List
 }
 
 <h2>Your ingredient was not found</h2>

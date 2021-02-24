@@ -28,7 +28,7 @@ namespace MessHall.Pages.Recipes
         // OnGet method
         public void OnGet()
         {
-            // If null, all recipes will be shown, otherwise allows for searching for a specic recipe
+            // If null, all recipes will be shown, otherwise allows for searching for a specific recipe
             Recipes = recipeRepository.GetRecipesByName(SearchTerm);
         }
     }

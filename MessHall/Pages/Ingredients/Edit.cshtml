@@ -2,10 +2,16 @@
 @model MessHall.Pages.Ingredients.EditModel
 @{
     ViewData["Title"] = "Edit";
+
+    // The Edit page is used to modify an existing Ingredient in the database
+    // This page is also used to create a new Ingredient
 }
 
 
 <h2>Editing @Model.Ingredient.Name</h2>
+
+<!-- Post method used to save a new or extant Ingredient-->
+<!-- Also verifies that valid data is entered-->
 
 <form method="post">
 
@@ -29,7 +35,7 @@
     <button type="submit" class="btn btn-primary">Save</button>
 </form>
 
-
+<!-- Script used for data validation -->
 @section scripts {
     <partial name="_ValidationScriptsPartial" />
 }
