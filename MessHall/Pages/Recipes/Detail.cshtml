@@ -16,7 +16,8 @@
 
 @foreach (var ingredient in Model.Ingredients)
 {
-    <p>@ingredient.Name</p>
+    <partial name="_RelatedIngredientCard" model="ingredient" />
 }
+
 <!-- Allows user to return to the Recipes List-->
 <a asp-page="./List" class="btn btn-primary">All Recipes</a>

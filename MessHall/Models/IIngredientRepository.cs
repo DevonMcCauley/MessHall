@@ -20,6 +20,7 @@ namespace MessHall.Models
 
         int Commit();
 
+        // Used to search for all related ingredients for a given recipe
         IEnumerable<Ingredient> RelatedIngredients(int recipeId);
     }
 }
