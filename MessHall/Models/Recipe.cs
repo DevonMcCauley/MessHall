@@ -15,5 +15,6 @@ namespace MessHall.Models
         public string Notes { get; set; }
 
 
+
     }
 }

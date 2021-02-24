@@ -8,11 +8,15 @@
 <!-- Displays Recipe information to the user-->
 <h2>@Model.Recipe.Name</h2>
 
-
 <h3>@Model.Recipe.Description</h3>
 
 <p>@Model.Recipe.Notes</p>
 
+<p>Ingredients for @Model.Recipe.Name</p>
 
+@foreach (var ingredient in Model.Ingredients)
+{
+    <p>@ingredient.Name</p>
+}
 <!-- Allows user to return to the Recipes List-->
 <a asp-page="./List" class="btn btn-primary">All Recipes</a>

@@ -4,14 +4,16 @@ using MessHall.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MessHall.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210224150701_RelationalRecipes")]
+    partial class RelationalRecipes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -64,38 +66,6 @@ namespace MessHall.Migrations
                             Description = "Some sugar",
                             Name = "Sugar",
                             RecipeId = 1
-                        },
-                        new
-                        {
-                            IngredientId = 3,
-                            CaloriesPerUnit = 350.0,
-                            Description = "Some meat",
-                            Name = "Meat",
-                            RecipeId = 2
-                        },
-                        new
-                        {
-                            IngredientId = 4,
-                            CaloriesPerUnit = 10.0,
-                            Description = "Some garlic",
-                            Name = "Garlic",
-                            RecipeId = 2
-                        },
-                        new
-                        {
-                            IngredientId = 5,
-                            CaloriesPerUnit = 200.0,
-                            Description = "Some sauce",
-                            Name = "Sauce",
-                            RecipeId = 3
-                        },
-                        new
-                        {
-                            IngredientId = 6,
-                            CaloriesPerUnit = 100.0,
-                            Description = "Some pasta",
-                            Name = "Pasta",
-                            RecipeId = 3
                         });
                 });
 
@@ -135,15 +105,8 @@ namespace MessHall.Migrations
                         new
                         {
                             RecipeId = 2,
-                            Description = "A description of a lasagna",
-                            Name = "Lasagna",
-                            Notes = "Sample notes"
-                        },
-                        new
-                        {
-                            RecipeId = 3,
-                            Description = "A description of spaghetti",
-                            Name = "Spaghetti",
+                            Description = "A description of a soup",
+                            Name = "Chicken Soup",
                             Notes = "Sample notes"
                         });
                 });

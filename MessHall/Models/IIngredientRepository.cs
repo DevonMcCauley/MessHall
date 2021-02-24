@@ -4,7 +4,6 @@ namespace MessHall.Models
 {
     public interface IIngredientRepository
     {
-
         // Interface for the Ingredient Repository for CRUD operations
 
         IEnumerable<Ingredient> GetIngredientsByName(string name);
@@ -21,15 +20,6 @@ namespace MessHall.Models
 
         int Commit();
 
+        IEnumerable<Ingredient> RelatedIngredients(int recipeId);
     }
-
 }
-
-
-
-
-
-
-
-
-
