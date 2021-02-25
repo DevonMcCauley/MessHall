@@ -2,14 +2,11 @@
 @model Ingredient
 <!-- This view displays an Ingredient in Detail.cshtml -->
 <!-- List will iterate through the database using this view to generate the UI for the related ingredients-->
-<div class="row">
-    <div class="col-lg-12">
-        <div class="card" style="margin-bottom: 1em;">
-            <div class="card-body">
-                <h5 class="card-title">@Model.Name</h5>
-                <p>Description: @Model.Description</p>
-                <p>Calories: @Model.CaloriesPerUnit</p>
-            </div>
-        </div>
+
+<div class="card m-3">
+    <div class="card-header">@Model.Name</div>
+    <div class="card-body">
+        <h5 class="card-title">@Model.Description</h5>
+        <p class="card-text">@Model.CaloriesPerUnit</p>
     </div>
 </div>
